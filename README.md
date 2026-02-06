@@ -17,7 +17,7 @@ Make sure to pass the sha256sum of the API key to the middleware. This allows st
 ```yaml
   experimental:
     plugins:
-      redirect-errors:
+      conditional-ip:
         moduleName: github.com/assetnote/traefik-conditional-ip
         version: v0.1.0
 ```
@@ -30,7 +30,7 @@ metadata:
   name: api-conditional-ip-auth
   namespace: traefik
 spec:
-  traefik-vouch:
+  conditional-ip:
     headerName: X-Api-Key
     keyIpMap: 
       "sha256ofyourkey": ["127.0.0.1"]
