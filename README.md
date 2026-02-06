@@ -6,7 +6,7 @@ Repository template taken from [traefik/plugindemo](https://github.com/traefik/p
 
 This traefik middleware plugin was explicitly built for the use case where there are certain API keys that can only be used from specific IP addresses. This middleware plugin allows you to specify a header name and a map of API keys to IP addresses that are allowed to use the API key. If the header is not present or the IP address is not in the list of allowed IP addresses, the request will be **allowed**.
 
-Repeated again, this middleware specifically prevents an API key from being used unless it satisifes the whitelist **otherwise** the request is allowed through as normal. This means that this middleware is not suitable as a catch-all authentication mechanism but merely on top of existing authentication mechanisms in the application or middleware chain. It is recommended to use this middleware in conjunction with other authentication mechanisms to ensure secure access to your API.
+Repeated again, this middleware specifically prevents an API key from being used unless it satisfies the whitelist **otherwise** the request is allowed through as normal. This means that this middleware is not suitable as a catch-all authentication mechanism but merely on top of existing authentication mechanisms in the application or middleware chain. It is recommended to use this middleware in conjunction with other authentication mechanisms to ensure secure access to your API.
 
 ## Installation and Configuration
 
