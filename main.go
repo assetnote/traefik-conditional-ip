@@ -140,8 +140,8 @@ func getClientIP(r *http.Request) net.IP {
 	}
 
 	if xff := r.Header.Get("X-Forwarded-For"); xff != "" {
-		parts := strings.SplitSeq(xff, ",")
-		for p := range parts {
+		parts := strings.Split(xff, ",")
+		for _, p := range parts {
 			ip := net.ParseIP(strings.TrimSpace(p))
 			if ip != nil {
 				return ip
