@@ -1,0 +1,8 @@
+displayName: Traefik Conditional IP
+type: middleware
+import: github.com/assetnote/traefik-conditional-ip
+summary: Check header to allow specific IP access
+testData:
+  headerName: "X-API-Key"
+  keyIpMap:
+    "sha256sum": ["127.0.0.1"]
